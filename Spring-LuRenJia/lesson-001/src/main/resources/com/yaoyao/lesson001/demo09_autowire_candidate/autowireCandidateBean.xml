@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!-- 将serviceA的autowire-candidate置为false，serviceA在被其他bean自动按照类型注入的时候，将不再放入候选名单中 -->
+    <bean id="serviceA" class="com.yaoyao.lesson001.demo09_autowire_candidate.SetterBean.ServiceA" autowire-candidate="false"/>
+    <bean id="serviceB" class="com.yaoyao.lesson001.demo09_autowire_candidate.SetterBean.ServiceB"/>
+
+    <bean id="setterBean" class="com.yaoyao.lesson001.demo09_autowire_candidate.SetterBean" autowire="byType" />
+</beans>
