@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!-- 定义替换者bean -->
+    <bean id="serviceBMethodReplacer" class="com.yaoyao.lesson001.demo13_lookupmethod_replacedmethod.ServiceBMethodReplacer" />
+
+    <bean id="serviceA" class="com.yaoyao.lesson001.demo13_lookupmethod_replacedmethod.ServiceA" scope="prototype"/>
+
+    <!-- replaced-method：
+        name：用于指定当前bean需要被替换的方法
+        replacer：替换者，即实现了MethodReplacer接口的类对应的bean
+        当调用serviceB的getServiceA的时候，会自动调用serviceBMethodReplacer这个bean中的reimplement方法进行处理。 -->
+    <bean id="serviceB" class="com.yaoyao.lesson001.demo13_lookupmethod_replacedmethod.ServiceB">
+        <replaced-method name="getServiceA" replacer="serviceBMethodReplacer"/>
+    </bean>
+
+</beans>

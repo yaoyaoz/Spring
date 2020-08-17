@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!-- serviceA的scope是prototype，表示serviceA是多例的，每次从容器中获取serviceA都会返回一个新的对象。 -->
+    <bean id="serviceA" class="com.yaoyao.lesson001.demo13_lookupmethod_replacedmethod.ServiceA" scope="prototype"/>
+
+    <!-- serviceB的scope没有配置，默认是单例的 -->
+    <bean id="serviceB" class="com.yaoyao.lesson001.demo13_lookupmethod_replacedmethod.ServiceB">
+        <property name="serviceA" ref="serviceA"/>
+    </bean>
+
+</beans>
