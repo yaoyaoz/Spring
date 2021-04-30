@@ -9,6 +9,6 @@
     id：bean的唯一标识，可以通过这个标识从容器中获取这个bean对象
     class：这个bean的类型，完整类名称
     -->
-    <bean id="helloWorld" class="com.yaoyao.lesson001.demo01.HelloWorld"/>
+    <bean id="helloWorld" class="com.yaoyao.lesson001.demo01_helloword.HelloWorld"/>
 
 </beans>

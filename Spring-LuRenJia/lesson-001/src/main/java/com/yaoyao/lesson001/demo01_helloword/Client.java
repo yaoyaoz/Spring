@@ -1,4 +1,4 @@
-package com.yaoyao.lesson001.demo01;
+package com.yaoyao.lesson001.demo01_helloword;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
     public static void main(String[] args) {
         //1.bean配置文件位置
-        String beanXml = "classpath:com/yaoyao/lesson001/demo01/beans.xml";
+        String beanXml = "classpath:com/yaoyao/lesson001/demo01_helloword/beans.xml";
 
         //2.创建ClassPathXmlApplicationContext容器，给容器指定需要加载的bean配置文件
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(beanXml);

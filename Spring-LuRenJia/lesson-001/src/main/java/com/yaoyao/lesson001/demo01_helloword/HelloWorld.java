@@ -1,4 +1,4 @@
-package com.yaoyao.lesson001.demo01;
+package com.yaoyao.lesson001.demo01_helloword;
 
 /**
  * ClassName: HelloWorld
